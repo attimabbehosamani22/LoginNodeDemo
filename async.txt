@@ -1,0 +1,32 @@
+var a=10;
+var b=0;
+function getMessage()
+{ 
+    return new Promise((resolve,reject)=>
+    {
+    setTimeout(()=>
+    {
+       resolve("b=10")
+    },1000)
+})}
+    
+
+
+async function geMsg2(callback)
+{
+    var re=await getMessage()
+    callback()
+    console.log(a+b)
+
+}
+
+geMsg2(getM2)
+
+function getM2()
+{
+    return b=20
+    
+}
+
+
+
